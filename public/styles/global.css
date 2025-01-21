@@ -1,0 +1,70 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: white;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+.header {
+    background-color: #f8f8f8;
+    padding: 20px 0;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+.header nav {
+    margin-top: 10px;
+}
+
+.header nav a {
+    margin: 0 10px;
+    color: #007bff;
+    text-decoration: none;
+}
+
+.header nav a:hover {
+    text-decoration: underline;
+}
+
+main {
+    padding: 20px;
+}
+
+.project {
+    background-color: #f8f8f8;
+    margin-bottom: 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.project h2 {
+    margin-top: 0;
+}
+
+.project p {
+    margin: 10px 0;
+}
+
+.github-link {
+    display: inline-block;
+    margin-top: 10px;
+    color: #007bff;
+    text-decoration: none;
+}
+
+.github-link:hover {
+    text-decoration: underline;
+}
+
+.footer {
+    background-color: #f8f8f8;
+    padding: 10px 0;
+    text-align: center;
+    border-top: 1px solid #ddd;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
