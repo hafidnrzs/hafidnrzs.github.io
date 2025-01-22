@@ -1,0 +1,10 @@
+---
+const { title, technologies, description, githubLink } = Astro.props;
+---
+
+<section class="project">
+  <h2>{title}</h2>
+  <p class="technologies"><strong>Technologies:</strong> {technologies}</p>
+  <p class="description">{description}</p>
+  <a href={githubLink} target="_blank" class="github-link">GitHub Repository</a>
+</section>
