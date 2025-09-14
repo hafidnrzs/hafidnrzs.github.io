@@ -1,59 +1,20 @@
 ---
-import Header from "../components/Header.astro";
-import Footer from "../components/Footer.astro";
-import Project from "../components/Project.astro";
+import Layout from '../layouts/Layout.astro';
+import Navbar from '@/components/Navbar.astro';
+import Hero from '@/components/Hero.astro';
+import Footer from '@/components/Footer.astro';
+import Marquee from '@/components/Marquee.astro';
+import Contact from '@/components/Contact.astro';
+import Portfolio from '@/components/Portfolio.astro';
 ---
 
-<!-- ---
-import Welcome from "../components/Welcome.astro";
-import Layout from "../layouts/Layout.astro";
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
----
-
- <Layout>
-	<Welcome />
-</Layout> -->
-<html>
-  <head>
-    <title>Hafid Nur</title>
-    <link rel="stylesheet" href="/styles/global.css" />
-  </head>
-  <body>
-    <Header />
-    <main>
-      <Project
-        title="YelpCamp"
-        technologies="Express, MongoDB"
-        description="Developed a web application that lists campgrounds, allowing users to view information such as location maps, descriptions, and reviews."
-        githubLink="https://github.com/hafidnrzs/yelp-camp"
-      />
-      <Project
-        title="Quantum Machine Learning"
-        technologies="Qiskit Machine Learning"
-        description="Conducted an individual project for Quantum Computing course, implementing quantum computing technology in machine learning."
-        githubLink="https://github.com/hafidnrzs/quantum-ml"
-      />
-      <Project
-        title="News Website Back-End"
-        technologies="Flask, PostgreSQL"
-        description="Developed the back-end API for a simple search engine that allows users to search for specific keywords in news documents."
-        githubLink="https://github.com/hafidnrzs/stki-backend"
-      />
-      <Project
-        title="IdeaGo Front-End"
-        technologies="Astro, React, TailwindCSS"
-        description="Contributed to the front-end of IdeaGo, a platform connecting business creators, investors, and freelancers."
-        githubLink="https://github.com/hafidnrzs/astro-fe/tree/development"
-      />
-      <Project
-        title="Vehicle Classification"
-        technologies="Flutter, Python, Flask"
-        description="Led a team of four in a final project for Artificial Intelligence course, developing a mobile app front-end using Flutter and back-end API with Flask."
-        githubLink="https://github.com/hafidnrzs/AI-project-akhir"
-      />
-    </main>
-    <Footer />
-  </body>
-</html>
+<Layout>
+  <Navbar />
+  <main>
+    <Hero />
+    <!-- <Marquee /> -->
+    <!-- <Portfolio /> -->
+    <!-- <Contact /> -->
+  </main>
+  <Footer />
+</Layout>

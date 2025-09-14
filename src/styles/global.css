@@ -1,1 +1,13 @@
-@import "tailwindcss";
+@import '@fontsource-variable/noto-serif';
+@import '@fontsource-variable/plus-jakarta-sans';
+@import 'tailwindcss';
+
+@theme {
+  --font-serif: 'Noto Serif Variable', Georgia, 'Times New Roman', serif;
+  --font-sans:
+    'Plus Jakarta Sans Variable', ui-sans-serif, system-ui, -apple-system,
+    sans-serif;
+
+  /* Color */
+  --color-dark: #050810;
+}

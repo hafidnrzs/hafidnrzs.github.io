@@ -1,3 +1,71 @@
-<footer class="footer">
-  <p>&copy; 2025 Hafid Nur</p>
+---
+import { Icon } from 'astro-icon/components';
+
+const socialLinks = [
+  {
+    href: 'https://facebook.com/hafidnrzs',
+    icon: 'mdi:facebook',
+    label: 'Facebook',
+  },
+  {
+    href: 'https://www.linkedin.com/in/hafidnrzs/',
+    icon: 'mdi:linkedin',
+    label: 'LinkedIn',
+  },
+  {
+    href: 'https://www.instagram.com/hafidnrzs/',
+    icon: 'mdi:instagram',
+    label: 'Instagram',
+  },
+  {
+    href: 'https://www.github.com/hafidnrzs/',
+    icon: 'mdi:github',
+    label: 'GitHub',
+  },
+];
+---
+
+<footer class="bg-dark flex w-full justify-center text-white">
+  <!-- <div class="container flex flex-col border-x border-gray-800 px-6">
+    <div>
+      <div>
+        <div>Hafid Nur</div>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora illo,
+          nostrum optio, corporis quibusdam cumque atque a eum ab, quam debitis
+          id ratione reiciendis! Corporis labore exercitationem maiores
+          dignissimos vitae?
+        </p>
+      </div>
+      <div>
+        <div>Company</div>
+        <ul>
+          <li>About Us</li>
+          <li>Service</li>
+          <li>Article</li>
+          <li>Testimonial</li>
+        </ul>
+      </div>
+      <div>
+        <div>Contact</div>
+        <a href="">Connect to Me</a>
+      </div>
+    </div> -->
+
+  <div
+    class="container flex flex-col items-center justify-between gap-y-3 py-4 md:flex-row"
+  >
+    <div>&copy;2025 Hafid Nur. All rights reserved</div>
+    <div class="flex gap-5">
+      {
+        socialLinks.map((link) => (
+          <a href={link.href} aria-label={link.label}>
+            <span class="inline-flex h-8 w-8 items-center justify-center rounded-full bg-white">
+              <Icon name={link.icon} class="text-dark" size={24} />
+            </span>
+          </a>
+        ))
+      }
+    </div>
+  </div>
 </footer>
