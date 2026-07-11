@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>What is RAG?</title>
+    <meta name="og:title" content="What is RAG?" />
+    <style>
+      body {
+        margin: 0 auto;
+        width: 720px;
+        font-family: "Georgia", serif;
+      }
+      p {
+        line-height: 1.5rem;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>What is RAG?</h1>
+    <p>
+      Large language models are trained on a fixed snapshot of data. Ask them
+      about something that happened after their training cutoff, or about your
+      company's internal docs, and they'll either say they don't know or
+      confidently make something up. Retrieval-Augmented Generation (RAG) is one
+      of the simplest fixes for this: instead of relying only on what the model
+      memorized during training, you give it relevant information at the moment
+      it answers.
+    </p>
+    <h2>How it works</h2>
+    <p>
+      A RAG pipeline has two main steps. First, retrieval: when a user asks a
+      question, the system searches an external knowledge base, usually a vector
+      database, for chunks of text that are semantically related to the query.
+      Second, generation: those retrieved chunks are inserted into the prompt
+      alongside the original question, and the language model generates an
+      answer grounded in that context.
+    </p>
+    <p>
+      In practice, this means documents are split into chunks, converted into
+      embeddings, and stored ahead of time. At query time, the question is
+      embedded too, and the closest matching chunks are pulled in via similarity
+      search before being handed to the model.
+    </p>
+    <h2>Why it matters</h2>
+    <p>
+      RAG lets you build applications that answer questions using up-to-date,
+      private, or domain-specific information, without retraining or fine-tuning
+      the underlying model. It also reduces hallucinations, since the model has
+      real source material to draw from, and it makes answers more auditable,
+      because you can trace a response back to the documents that informed it.
+    </p>
+    <p>
+      That combination: freshness, grounding, and traceability, is why RAG has
+      become one of the default patterns for building practical LLM applications
+      on top of private data.
+    </p>
+  </body>
+  <!-- giscus comments -->
+  <script
+    src="https://giscus.app/client.js"
+    data-repo="hafidnrzs/hafidnrzs.github.io"
+    data-repo-id="R_kgDOIfiAxQ"
+    data-category="General"
+    data-category-id="DIC_kwDOIfiAxc4DA9cc"
+    data-mapping="og:title"
+    data-strict="0"
+    data-reactions-enabled="1"
+    data-emit-metadata="0"
+    data-input-position="top"
+    data-theme="light"
+    data-lang="en"
+    data-loading="lazy"
+    crossorigin="anonymous"
+    async
+  ></script>
+</html>
